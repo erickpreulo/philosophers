@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 17:26:22 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/05 09:12:31 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/05 17:27:52 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	exit_function(t_obj *obj)
 {
 	int	i;
 
-	printf("%d\n", obj->arg.philos);
 	i = -1;
 	while (++i < obj->arg.philos)
 		pthread_join(obj->philo[i].thread_id, NULL);

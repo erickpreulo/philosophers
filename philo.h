@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:11:45 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/05 09:11:22 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/05 17:05:17 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_philo
 	pthread_t				thread_id;
 	int						r_f;
 	int						l_f;
-	int						last_meal;
+	long					last_meal;
 	int						id;
 	int						x_ate;
 	struct s_arg			*arg;
