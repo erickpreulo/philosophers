@@ -71,7 +71,6 @@ void	death_checker(t_obj *obj)
 				obj->arg.dieded = 1;
 			}
 			pthread_mutex_unlock(&(obj->arg.meal_check));
-			//usleep(100);
 		}
 		if (obj->arg.dieded)
 			break ;
