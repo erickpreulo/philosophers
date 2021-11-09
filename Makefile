@@ -6,17 +6,17 @@
 #    By: egomes <egomes@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 13:20:11 by egomes            #+#    #+#              #
-#    Updated: 2021/10/21 12:07:38 by egomes           ###   ########.fr        #
+#    Updated: 2021/11/09 12:15:32 by egomes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = philo.c srcs/utils.c srcs/validation.c srcs/philo_utils.c
 
-NAME = philo
+NAME = philo_one
 
 INCLUD = -I .
 
-CC = gcc
+CC = gcc -fsanitize=address -g
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -33,7 +33,7 @@ $(NAME):	$(OBJ)
 all:		$(NAME)
 
 test:	re
-		@$(CC) $(CFLAGS) test.c $(NAME) -fsanitize=address -g
+		@$(CC) $(CFLAGS) $(NAME) -fsanitize=address -g
 
 clean:
 		${shell find . -type f -name "*.o" -delete}
