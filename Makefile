@@ -6,11 +6,11 @@
 #    By: egomes <egomes@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 13:20:11 by egomes            #+#    #+#              #
-#    Updated: 2021/11/09 12:15:32 by egomes           ###   ########.fr        #
+#    Updated: 2021/11/09 16:00:02 by egomes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = philo.c srcs/utils.c srcs/validation.c srcs/philo_utils.c
+SRC = philo.c srcs/utils.c srcs/validation.c srcs/philo_utils.c srcs/function.c
 
 NAME = philo_one
 

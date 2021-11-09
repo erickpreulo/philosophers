@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:11:45 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/05 17:05:17 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/09 16:17:16 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_philo
 	int						l_f;
 	long					last_meal;
 	int						id;
-	int						x_ate;
+	int						x_eat;
 	struct s_arg			*arg;
 }							t_philo;
 
@@ -63,5 +63,7 @@ void		init_philos(t_obj *obj);
 void		print(t_arg *arg, int id, char *str);
 void		smart_sleep(long long time, t_arg *arg);
 void		exit_function(t_obj *obj);
+void		init_function(t_obj *obj);
+void		death_checker(t_obj *obj);
 
 #endif
