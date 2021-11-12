@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:57:24 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/08 17:27:49 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/09 21:14:34 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,9 @@ int	init_philo(t_obj *obj, int ac, char **av)
 	obj->arg.nb_eat = -1;
 	if (ac == 6)
 		obj->arg.nb_eat = ft_atoi(av[5]);
+	if (obj->arg.philos > 250 || obj->arg.die <= 0
+		|| obj->arg.eat <= 0 || obj->arg.sleep <= 0
+		|| obj->arg.nb_eat < -1)
+		return (error("Arguments Numbers"));
 	return (1);
 }

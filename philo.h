@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:11:45 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/09 16:17:16 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/12 15:40:09 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ typedef struct s_philo
 typedef struct s_arg
 {
 	int						philos;
-	int						die;
-	int						eat;
+	long					die;
+	long					eat;
 	int						sleep;
 	int						stop;
 	int						dieded;
 	int						all_eat;
 	int						time_sleep;
-	int						nb_eat;
+	long					nb_eat;
 	long long				first_time;
 	pthread_mutex_t			meal_check;
-	pthread_mutex_t			forks[250];
+	pthread_mutex_t			forks[255];
 	pthread_mutex_t			writing;
-	t_philo					philo[250];
+	t_philo					philo[255];
 }							t_arg;
 
 typedef struct s_obj
