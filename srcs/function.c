@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:58:38 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/09 16:06:02 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/18 17:45:16 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	philo_eats(t_philo *philo)
 	pthread_mutex_unlock(&(arg->meal_check));
 	smart_sleep(arg->eat, arg);
 	(philo->x_eat)++;
-	usleep(100);
 	pthread_mutex_unlock(&(arg->forks[philo->l_f]));
 	pthread_mutex_unlock(&(arg->forks[philo->r_f]));
 }

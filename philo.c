@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:11:20 by egomes            #+#    #+#             */
-/*   Updated: 2021/11/12 15:44:42 by egomes           ###   ########.fr       */
+/*   Updated: 2021/11/18 16:54:43 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	main(int ac, char **av)
 
 	if (!init_philo(&obj, ac, av))
 		return (0);
-	// obj.philo = malloc(sizeof(t_philo) * obj.arg.philos);
-	// if (!obj.philo)
-	// 	return (error("Malloc"));
+	obj.philo = malloc(sizeof(t_philo) * obj.arg.philos);
+	if (!obj.philo)
+		return (error("Malloc"));
 	init_mutex(&obj);
 	init_philos(&obj);
 	init_function(&obj);
